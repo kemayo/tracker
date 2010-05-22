@@ -5,6 +5,8 @@ import gzip
 import re
 import yaml
 import sqlite3
+import datetime
+import time
 from StringIO import StringIO
 
 __author__ = 'David Lynch (kemayo at gmail dot com)'
@@ -57,17 +59,19 @@ class SequenceStore(object):
         c.execute("""INSERT INTO store (type, date, value) VALUES (?, DATETIME(), ?)""", (type, value,))
         self.store.commit()
         c.close()
-    def get(self, type):
+    def get(self, type, parse_dates = True):
         """Fetch a given type's data
 
         type is a string to fetch all associated values for
 
-        returns a list of tuples in the form (date-string, value)
+        returns a list of tuples in the form (datetime, value)
         """
         c = self.store.cursor()
         c.execute("""SELECT date, value FROM store WHERE type = ? ORDER BY date DESC""", (type,))
         rows = c.fetchall()
         c.close()
+        if parse_dates:
+            rows = [(datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S"), value) for date,value in rows]
         return rows
 
 
