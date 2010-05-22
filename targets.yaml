@@ -1,0 +1,79 @@
+SilverDragon (wowi):
+  url: http://www.wowinterface.com/downloads/info6606-SilverDragon.html
+  pattern: Downloads:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+SilverDragon faves (wowi):
+  url: http://www.wowinterface.com/downloads/info6606-SilverDragon.html
+  pattern: Favorites:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+BankStack (wowi):
+  url: http://www.wowinterface.com/downloads/info7761-BankStack.html
+  pattern: Downloads:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+BankStack faves (wowi):
+  url: http://www.wowinterface.com/downloads/info7761-BankStack.html
+  pattern: Favorites:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+DropTheCheapestThing (wowi):
+  url: http://www.wowinterface.com/downloads/info12596-DropTheCheapestThing.html
+  pattern: Downloads:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+DropTheCheapestThing faves (wowi):
+  url: http://www.wowinterface.com/downloads/info12596-DropTheCheapestThing.html
+  pattern: Favorites:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+FuBar - QuestsFu (wowi):
+  url: http://www.wowinterface.com/downloads/info4752-FuBar-QuestsFu.html
+  pattern: Downloads:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+FuBar - QuestsFu faves (wowi):
+  url: http://www.wowinterface.com/downloads/info4752-FuBar-QuestsFu.html
+  pattern: Favorites:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+OpenAll (wowi):
+  url: http://www.wowinterface.com/downloads/info7762-OpenAll.html
+  pattern: Downloads:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+OpenAll faves (wowi):
+  url: http://www.wowinterface.com/downloads/info7762-OpenAll.html
+  pattern: Favorites:</div></td>\r?\n\s*<td[^>]*><div[^>]*>([\d,]+)</div>
+
+QuestPointer (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/questpointer.aspx
+  pattern: Downloads Total:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+QuestPointer faves (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/questpointer.aspx
+  pattern: Favorites:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+BetterQuest (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/better-quest.aspx
+  pattern: Downloads Total:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+BetterQuest faves (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/better-quest.aspx
+  pattern: Favorites:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+BankStack (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/bank-stack.aspx
+  pattern: Downloads Total:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+BankStack faves (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/bank-stack.aspx
+  pattern: Favorites:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+SilverDragon (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/silver-dragon.aspx
+  pattern: Downloads Total:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+SilverDragon faves (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/silver-dragon.aspx
+  pattern: Favorites:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+DropTheCheapestThing (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/dropthecheapestthing.aspx
+  pattern: Downloads Total:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+DropTheCheapestThing faves (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/dropthecheapestthing.aspx
+  pattern: Favorites:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+FuBar - QuestsFu (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/fu-bar_quests-fu.aspx
+  pattern: Downloads Total:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+FuBar - QuestsFu faves (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/fu-bar_quests-fu.aspx
+  pattern: Favorites:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+ShadowedUF - 5SR (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/shadowuf-five.aspx
+  pattern: Downloads Total:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+ShadowedUF - 5SR faves (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/shadowuf-five.aspx
+  pattern: Favorites:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+BuffDrop (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/buff-drop.aspx
+  pattern: Downloads Total:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
+BuffDrop faves (curse):
+  url: http://wow.curse.com/downloads/wow-addons/details/buff-drop.aspx
+  pattern: Favorites:</th>\r?\n\s*<td[^>]*>([\d,]+)</td>
