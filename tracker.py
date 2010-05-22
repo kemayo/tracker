@@ -32,7 +32,14 @@ def _fetch(url, cached = True):
     return data
 
 class SequenceStore(object):
+    """A store for values by date, sqlite-backed"""
     def __init__(self, storepath):
+        """Initializes the store; creates tables if required
+
+        storepath is the path to a sqlite database, and will be created
+        if it doesn't already exist. (":memory:" will store everything
+        in-memory, if you only need to use this as a temporary thing).
+        """
         store = sqlite3.connect(storepath)
         self.store = store
         c = store.cursor()
@@ -41,11 +48,22 @@ class SequenceStore(object):
         self.store.commit()
         c.close()
     def add(self, type, value):
+        """Add a value to the store, at the current time
+
+        type is a string that the value will be associated with
+        value is the value to be stored
+        """
         c = self.store.cursor()
         c.execute("""INSERT INTO store (type, date, value) VALUES (?, DATETIME(), ?)""", (type, value,))
         self.store.commit()
         c.close()
     def get(self, type):
+        """Fetch a given type's data
+
+        type is a string to fetch all associated values for
+
+        returns a list of tuples in the form (date-string, value)
+        """
         c = self.store.cursor()
         c.execute("""SELECT date, value FROM store WHERE type = ? ORDER BY date DESC""", (type,))
         rows = c.fetchall()
