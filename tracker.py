@@ -59,10 +59,13 @@ class SequenceStore(object):
         c.execute("""INSERT INTO store (type, date, value) VALUES (?, DATETIME(), ?)""", (type, value,))
         self.store.commit()
         c.close()
-    def get(self, type, parse_dates = True):
+    def get(self, type, parse_dates = True, value_function = lambda x: x):
         """Fetch a given type's data
 
         type is a string to fetch all associated values for
+        parse_dates is a boolean; if true, the sqlite date will be
+            turned into a datetime object
+        value_function is a function to apply to the returned values
 
         returns a list of tuples in the form (datetime, value)
         """
@@ -71,7 +74,7 @@ class SequenceStore(object):
         rows = c.fetchall()
         c.close()
         if parse_dates:
-            rows = [(datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S"), value) for date,value in rows]
+            rows = [(datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S"), value_function(value)) for date,value in rows]
         return rows
 
 
